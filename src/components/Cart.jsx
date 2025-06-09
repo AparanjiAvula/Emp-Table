@@ -3,13 +3,13 @@ import { useState } from 'react';
 import Table from './Table';
 let arr=[
     {
-     name:'ravi',
+     name:'arun',
      role:'coach',
      iplTeam:'RCB',
      salary:'1 croces',
      nickName:'ravi',
       age:45,
-      password:'ravi@123',
+      password:'arun@123',
       gender:'male'
     },
   {
@@ -58,10 +58,12 @@ function Cart() {
   const [password,setPassword]=useState('');
   const [emp,setEmp]=useState([]);
   const [show,setShow]=useState(false);
+  
   const clickbtn=()=>{
     let filter=arr.find((e)=>{
       if(e.name===username && e.password===password)
        return e;
+      else return NaN;
       })
 
     
